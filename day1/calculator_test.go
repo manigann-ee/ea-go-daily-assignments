@@ -36,3 +36,27 @@ func TestMultiplicationOfTwoNumbers(t *testing.T) {
 	result := multiply(3, 3)
 	assert.Equal(t, 9, result, "Expected result to be 9")
 }
+
+func TestSinOfGivenNumber(t *testing.T) {
+	result := sin(1)
+
+	assert.Equal(t, 0.8414709848078965, result, "Expected result to be 0.8414709848078965")
+}
+
+func TestCosOfGivenNumber(t *testing.T) {
+	result := cos(1)
+
+	assert.Equal(t, 0.5403023058681398, result, "Expected result to be 0.5403023058681398")
+}
+
+func TestTanOfGivenNumber(t *testing.T) {
+	result := tan(1)
+
+	assert.Equal(t, 1.557407724654902, result, "Expected result to be 1.557407724654902")
+}
+
+func TestSquareRootOfGivenNumber(t *testing.T) {
+	result := sqrt(4)
+
+	assert.Equal(t, float64(2), result, "Expected result to be 4")
+}
