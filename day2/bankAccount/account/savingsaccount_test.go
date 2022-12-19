@@ -22,7 +22,7 @@ func TestSavingsAccountSuccessful_Deposit(t *testing.T) {
 func TestSavingsAccountSuccessful_Withdrawal(t *testing.T) {
 	acc := SavingsAccount{balance: 500}
 
-	acc.Withdraw(200)
+	acc.WithDraw(200)
 
 	assert.Equal(t, float64(300), acc.GetBalance())
 }

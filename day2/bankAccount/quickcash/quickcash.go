@@ -1,15 +1,15 @@
 package quickcash
 
 type QuickCash struct {
-	PrimaryAccount   Withdrawable
-	SecondaryAccount Withdrawable
+	SavingsAccount    Withdrawable
+	CreditCardAccount Withdrawable
 }
 
 func (qc *QuickCash) getCash(amount float64) (float64, string) {
-	if qc.PrimaryAccount.CanWithDraw(amount) {
-		qc.PrimaryAccount.WithDraw(amount)
-		return amount, qc.PrimaryAccount.GetIdentifier()
+	if qc.SavingsAccount.CanWithDraw(amount) {
+		qc.SavingsAccount.WithDraw(amount)
+		return amount, qc.SavingsAccount.GetIdentifier()
 	}
-	qc.SecondaryAccount.WithDraw(amount)
-	return amount, qc.SecondaryAccount.GetIdentifier()
+	qc.CreditCardAccount.WithDraw(amount)
+	return amount, qc.CreditCardAccount.GetIdentifier()
 }
