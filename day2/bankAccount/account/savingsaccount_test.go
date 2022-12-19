@@ -6,13 +6,13 @@ import (
 )
 
 func TestSavingsAccount_GetBalance(t *testing.T) {
-	acc := SavingsAccount{balance: 100}
+	acc := SavingsAccount{Balance: 100}
 
 	assert.Equal(t, float64(100), acc.GetBalance())
 }
 
 func TestSavingsAccountSuccessful_Deposit(t *testing.T) {
-	acc := SavingsAccount{balance: 400}
+	acc := SavingsAccount{Balance: 400}
 
 	(&acc).Deposit(100)
 
@@ -20,7 +20,7 @@ func TestSavingsAccountSuccessful_Deposit(t *testing.T) {
 }
 
 func TestSavingsAccountSuccessful_Withdrawal(t *testing.T) {
-	acc := SavingsAccount{balance: 500}
+	acc := SavingsAccount{Balance: 500}
 
 	acc.WithDraw(200)
 

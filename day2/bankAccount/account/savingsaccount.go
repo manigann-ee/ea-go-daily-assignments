@@ -1,23 +1,27 @@
 package account
 
 type SavingsAccount struct {
-	balance float64
+	Balance float64
 }
 
 func (sa *SavingsAccount) GetBalance() float64 {
-	return sa.balance
+	return sa.Balance
 }
 
 func (sa *SavingsAccount) Deposit(amount float64) {
-	sa.balance += amount
+	sa.Balance += amount
 }
 
 func (sa *SavingsAccount) WithDraw(amount float64) {
-	sa.balance -= amount
+	sa.Balance -= amount
 }
 
 func (sa *SavingsAccount) CanWithDraw(amount float64) bool {
-	return true
+	if sa.Balance >= amount {
+		return true
+	} else {
+		return false
+	}
 }
 
 func (sa *SavingsAccount) GetIdentifier() string {

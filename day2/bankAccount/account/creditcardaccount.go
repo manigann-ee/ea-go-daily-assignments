@@ -1,23 +1,27 @@
 package account
 
 type CreditCardAccount struct {
-	balance float64
+	Balance float64
 }
 
 func (cca *CreditCardAccount) GetBalance() float64 {
-	return cca.balance
+	return cca.Balance
 }
 
 func (cca *CreditCardAccount) Deposit(amount float64) {
-	cca.balance += amount
+	cca.Balance += amount
 }
 
 func (cca *CreditCardAccount) WithDraw(amount float64) {
-	cca.balance -= amount
+	cca.Balance -= amount
 }
 
 func (cca *CreditCardAccount) CanWithDraw(amount float64) bool {
-	return true
+	if cca.Balance >= amount {
+		return true
+	} else {
+		return false
+	}
 }
 
 func (cca *CreditCardAccount) GetIdentifier() string {
