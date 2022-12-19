@@ -1,7 +1,7 @@
 package quickcash
 
 import (
-	"bankAccount/account"
+	"bankaccount/account"
 	"github.com/stretchr/testify/assert"
 	"testing"
 )

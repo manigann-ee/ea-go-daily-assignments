@@ -1,4 +1,4 @@
-module bankAccount
+module bankaccount
 
 go 1.19
 
