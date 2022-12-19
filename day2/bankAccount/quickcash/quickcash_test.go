@@ -6,7 +6,6 @@ import (
 )
 
 func TestGetCashFromSavingsAccount(t *testing.T) {
-
 	fpa := &FakePrimaryAccount{}
 	fsa := &FakeSecondaryAccount{}
 
